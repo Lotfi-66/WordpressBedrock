@@ -20,7 +20,7 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 Ouvrez votre terminal et clonez le dépôt :
 
 ```bash
-git clone https://github.com/votre-utilisateur/votre-depot.git
+git clone git@github.com:Lotfi-66/WordpressBedrock.git
 cd votre-depot
 ```
 

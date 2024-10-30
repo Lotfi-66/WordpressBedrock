@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-[#111111] text-white font-['Roboto',Arial,sans-serif];
+}
+
+nav {
+    @apply fixed top-0 w-full bg-[rgba(34,34,34,0.9)] shadow-[0_2px_10px_rgba(0,0,0,0.3)] backdrop-blur-[5px] z-[1000] py-4 text-center;
+}
+nav span {
+    @apply inline-block px-5 py-2 text-lg font-bold uppercase tracking-[2px] transition-colors duration-300 ease-in-out hover:text-[#00ffff];}
+
+.logo-item.active .logo-name {
+    @apply opacity-0;
+}
+
+.logo-item.active img,
+.logo-item.active canvas {
+    @apply opacity-100;
+}
+
+
+@media (max-width: 1600px) {
+    #app {
+        max-width: 1400px;
+    }
+}
+
+@media (max-width: 1400px) {
+    #app {
+        max-width: 1200px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #app {
+        max-width: 1000px;
+    }
+
+    .logo-name {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    #app {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 0;
+    }
+
+    nav span {
+        font-size: 16px;
+        margin: 0 15px;
+    }
+
+    #app {
+        padding: 80px 20px 40px;
+        gap: 20px;
+    }
+
+    .logo-name {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    #app {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .logo-item {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    nav span {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .logo-name {
+        font-size: 16px;
+    }
+}
